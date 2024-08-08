@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="資訊"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_slam_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="導航模式"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_information"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_map_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目前地圖"
+        app:layout_constraintStart_toEndOf="@id/btn_slam_mode"
+        app:layout_constraintTop_toBottomOf="@id/tv_information"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目前電量"
+        app:layout_constraintStart_toEndOf="@id/btn_map_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_information"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="動作"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_battery"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_goto_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前往地點"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_action"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_goto_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintStart_toEndOf="@id/tv_goto_location"
+        app:layout_constraintTop_toTopOf="@id/tv_goto_location"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-8dp" />
+
+    <Button
+        android:id="@+id/btn_goto_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintStart_toEndOf="@id/btn_goto_a"
+        app:layout_constraintTop_toTopOf="@id/btn_goto_a"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_goto_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintStart_toEndOf="@id/btn_goto_b"
+        app:layout_constraintTop_toTopOf="@id/btn_goto_b"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_goto_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前往充電座"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goto_location"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_goto_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        app:layout_constraintStart_toEndOf="@id/tv_goto_charge"
+        app:layout_constraintTop_toTopOf="@id/tv_goto_charge"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-8dp" />
+
+    <Button
+        android:id="@+id/btn_goto_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最近的"
+        app:layout_constraintStart_toEndOf="@id/btn_goto_home"
+        app:layout_constraintTop_toTopOf="@id/btn_goto_home"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_run_python"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUN PY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goto_charge"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/txt_python_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will be shown here"
+        app:layout_constraintStart_toEndOf="@id/btn_run_python"
+        app:layout_constraintTop_toTopOf="@id/btn_run_python"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_api_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API CALL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_run_python"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/txt_api_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API Result"
+        app:layout_constraintStart_toEndOf="@id/btn_api_call"
+        app:layout_constraintTop_toTopOf="@id/btn_api_call"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_pose_recognition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POSE RECOGNITION"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_api_call"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_emergency_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMERGENCY STOP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_pose_recognition"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/txt_inspection_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Numbers will be shown here"
+        app:layout_constraintStart_toEndOf="@id/btn_emergency_stop"
+        app:layout_constraintTop_toTopOf="@id/btn_emergency_stop"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_record_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record Audio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_emergency_stop"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/btn_upload_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD FILE"
+        app:layout_constraintStart_toEndOf="@id/btn_record_audio"
+        app:layout_constraintTop_toTopOf="@id/btn_record_audio"
+        android:layout_marginStart="16dp" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_api_call"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

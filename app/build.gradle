@@ -1,0 +1,115 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+    id 'org.jetbrains.kotlin.android' version '1.7.20'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.mobisnet.mobisnetrobotsdk"
+        minSdk 28
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+        python {
+            version "3.8"
+
+
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.3.2'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'  // 確保兼容 SDK 31
+    implementation 'androidx.core:core-ktx:1.6.0'        // 確保兼容 SDK 31
+    implementation 'androidx.activity:activity-compose:1.3.1' // 確保兼容 SDK 31
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.5.1'
+
+    implementation 'androidx.compose.ui:ui:1.1.1'
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    implementation 'androidx.compose.ui:ui-tooling-preview:1.1.1'
+    implementation 'androidx.compose.ui:ui-tooling-data:1.1.1'
+    implementation 'androidx.compose.ui:ui-text:1.1.1'
+    implementation 'androidx.compose.ui:ui-graphics:1.1.1'
+    implementation 'androidx.compose.ui:ui-unit:1.1.1'
+    implementation 'androidx.compose.ui:ui-geometry:1.1.1'
+    implementation 'androidx.compose.ui:ui-util:1.1.1'
+    implementation 'androidx.compose.ui:ui-test-manifest:1.1.1'
+
+    implementation 'androidx.compose.material3:material3:1.0.0-alpha04'
+    implementation 'androidx.compose.material:material:1.1.1'
+    implementation 'androidx.compose.material:material-icons-core:1.1.1'
+    implementation 'androidx.compose.material:material-ripple:1.1.1'
+
+    implementation 'androidx.compose.foundation:foundation:1.1.1'
+    implementation 'androidx.compose.foundation:foundation-layout:1.1.1'
+
+    implementation 'androidx.compose.animation:animation:1.1.1'
+    implementation 'androidx.compose.animation:animation-core:1.1.1'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-core:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
+
+    implementation 'androidx.emoji2:emoji2:1.1.0'
+    implementation 'androidx.customview:customview-poolingcontainer:1.0.0-alpha01'
+    implementation 'androidx.profileinstaller:profileinstaller:1.1.0'
+    implementation 'androidx.savedstate:savedstate:1.1.0'
+    implementation 'androidx.savedstate:savedstate-ktx:1.1.0'
+    implementation 'androidx.annotation:annotation-experimental:1.1.0'
+    implementation 'androidx.arch.core:core-runtime:2.1.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1' // 确保版本兼容
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // 确保版本兼容
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+
+    // Mobisnet Robot SDK
+    implementation files('libs/robotsdk-release.aar')
+    androidTestImplementation platform('androidx.compose:compose-bom:2023.08.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}
