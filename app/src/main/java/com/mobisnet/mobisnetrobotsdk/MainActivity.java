@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         btnApiCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new GradioApiRequestTask().execute("https://google.com", "your_parameter"); // 替换为你的Gradio API URL和参数
+                new GradioApiRequestTask().execute("https://410f0ec089018ec1f9.gradio.live", "your_parameter"); // 替换为你的Gradio API URL和参数
             }
         });
 
@@ -326,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         // 按下 OK 按鈕後執行
-                                        loadUrlInWebView("https://google.com.tw");
+                                        loadUrlInWebView("https://410f0ec089018ec1f9.gradio.live");
                                     }
                                 })
                                 .show();
@@ -377,7 +377,7 @@ public class MainActivity extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int id) {
                                         // 按下 OK 按鈕後執行
                                         webView.setVisibility(View.VISIBLE);
-                                        loadUrlInWebView("https://google.com.tw");
+                                        loadUrlInWebView("https://410f0ec089018ec1f9.gradio.live");
                                     }
                                 })
                                 .show();
@@ -474,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // 按下 OK 按鈕後執行
-                            loadUrlInWebView("https://google.com.tw");
+                            loadUrlInWebView("https://410f0ec089018ec1f9.gradio.live");
                         }
                     });
             builder.create().show();
