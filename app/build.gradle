@@ -18,7 +18,11 @@ android {
         }
         python {
             version "3.8"
+            pip{
+                install "gradio-4.40.0-py3-none-any.whl"
+                install "azure_cognitiveservices_speech-1.38.0-py3-none-manylinux2014_aarch64.whl"
 
+            }
 
 
         }
